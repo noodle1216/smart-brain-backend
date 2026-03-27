@@ -9,7 +9,7 @@
 //         method: "POST",
 //         headers: {
 //           "Accept": "application/json",
-//           "Authorization": "Key 3f76fcee1f2e47e9b1c84d9643a119e1"
+//           "Authorization": "Key no shown here"
 //         },
 //         body: JSON.stringify({
 //         	user_app_id: {
