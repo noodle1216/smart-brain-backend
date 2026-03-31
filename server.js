@@ -40,6 +40,8 @@ app.use(cors({
   credential: true
 }));
 
+app.options('*', cors());
+
 app.get('/', (req, res) => {
 	res.send('success');
 })
