@@ -34,13 +34,14 @@ const db = knex({
 
 const app = express();
 
-app.use(express.json());
 app.use(cors({
   origin: process.env.FRONTEND_URL,
   credential: true
 }));
 
 app.options('*', cors());
+
+app.use(express.json());
 
 app.get('/', (req, res) => {
 	res.send('success');
