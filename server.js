@@ -26,17 +26,17 @@ const image = require('./controllers/image');
 //Render version
 const db = knex({
   client: 'pg',
-  connection: process.env.DATABASE_URL,
-  ssl: {
-    rejectUnauthorized: false
-  }
+  connection: {
+    connectionString: process.env.DATABASE_URL,
+    ssl: { rejectUnauthorized: false }
+  } 
 });
 
 const app = express();
 
 app.use(cors({
   origin: process.env.FRONTEND_URL,
-  credential: true
+  credentials: true
 }));
 
 app.options('*', cors());
